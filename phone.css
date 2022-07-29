@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+/* font-family: 'Shrikhand', cursive; */
+/* font-family: 'Roboto', sans-serif; */
+body {
+    margin: 0;
+}
+
+/* header */
+
+.header-conteiner {
+    border-bottom: solid 2px #C6C6C6;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.header-logo {
+    width: 40%;
+}
+
+/* location  */
+.location-conteiner {
+    background-color: rgb(234, 234, 234);
+}
+
+/* explore */
+.explore {
+    background-color: rgb(246, 246, 246);
+}
+
+.explore-conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.explore-title {
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.explore-text {
+    margin: 0;
+    color: black;
+    font-weight: 300;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.explore-btn-title {
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* fonctionnement */
+
+.fonction-title {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* liste restaurant */
+.restaurants {
+    background-color: rgb(246, 246, 246);
+}
+
+.restaurants-title {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+/* footer */
+
+.footer {
+    background-color: rgb(53, 53, 53);
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-title {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.footer-text {
+    color: white;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-bold {
+    font-weight: 600 !important;
+}
+
+.footer-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-icon {
+    color: white;
+    font-size: 15px;
+    margin-right: 10px;
+}
