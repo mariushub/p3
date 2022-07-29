@@ -15,8 +15,8 @@
             <img src="./assets/logo/ohmyfood.png" alt="Logo OhMyFood" class="header-logo">
         </div>
         <div class="location-conteiner">
-            <i class="fa-solid fa-location-dot"></i>
-            <a>Paris, Belleville</a>
+            <i class="fa-solid fa-location-dot location-logo"></i>
+            <p class="location-text">Paris, Belleville</p>
         </div>
     </header>
 
@@ -29,22 +29,55 @@
                 <p class="explore-text">Découvrez des restaurants d'exception, <br> séléctionnés par nos soins.</p>
                 <a href="restaurants" class="explore-ling">
                     <button class="explore-btn">
-                        <span class="reverse-btn-title">Explorer nos restaurants</span>
+                        <span class="explore-btn-title">Explorer nos restaurants</span>
                     </button>
                 </a>
             </div>
         </section>
+
+        <!-- fonctionnement ohmyfood-->
         <section class="fonction">
+            <h2 class="fonction-title">Fonctionnement</h2> 
             <div class="fonction-conteiner">
-                <h2 class="fonction-title">Fonctionnement</h2> 
-                <p><button><i class="fa-solid fa-mobile-screen-button"></i> Choisissez un restaurants</button></p>
-                <p><button><i class="fa-solid fa-ellipsis-vertical"></i><i class="fa-solid fa-bars"></i> Composez votre menu</button></p>
-                <p><button><i class="fa-solid fa-store"></i> Dégustez au restaurant</button></p>
+                <button class="fonction-btn">
+                    <div class="fonction-step">
+                        <p class="fonction-step-text">1</p>
+                    </div>
+                    <i class="fa-solid fa-mobile-screen-button fonction-logo"></i>
+                    <p class="fonction-text">Choisissez un restaurants</p>
+                </button>
+                <button class="fonction-btn">
+                    <div class="fonction-step">
+                        <p class="fonction-step-text">2</p>
+                    </div>
+                    <i class="fa-list-ul fas fonction-logo"></i>
+                    <p class="fonction-text">Composez votre menu</p>
+                </button>
+                <button class="fonction-btn">
+                    <div class="fonction-step">
+                        <p class="fonction-step-text">3</p>
+                    </div>
+                    <i class="fa-solid fa-store fonction-logo"></i>
+                    <p class="fonction-text">Dégustez au restaurant</p>
+                </button>
             </div>
         </section>
+
+        <!-- Liste des restaurants -->
         <section class="restaurants">
+            <h2 class="restaurants-title">Restaurants</h2>
             <div class="restaurants-conteiner">
-                <h2 class="restaurants-title">Restaurants</h2>
+                <div class="restaurant">
+                    <img src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo la palette du gout" class="restaurant-image">
+                    <span class="restaurant-new">Nouveau</span>
+                    <div class="restaurant-conteiner">
+                        <div class="restaurant-text-conteiner">
+                            <h2 class="restaurant-name">La palette du goût</h2>
+                            <h3 class="restaurant-location">Ménilmontant</h3>
+                        </div>
+                        <i class="fa-regular fa-heart restaurant-heart"></i>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
