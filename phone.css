@@ -7,6 +7,10 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .iswhite {
     color: white !important;
 }
@@ -205,39 +209,92 @@ body {
     margin: 0;
     padding-top: 40px;
     font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
 }
 
 .restaurant {
-    box-shadow: 0px 0px 15px 11px rgba(0,0,0,0.26);
+    box-shadow: 0px 0px 15px 11px rgba(0, 0, 0, 0.128);
     width: 100%;
+    max-width: 700px;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .restaurant-new {
     background-color: #99e2d0;
     color: #1b6150;
-    padding: 0.5rem;
-    border-radius: 0.125rem;
+    padding: .5rem;
+    border-radius: .125rem;
     position: absolute;
-    top: 0rem;
-    right: 0rem;
+    top: 1rem;
+    right: .75rem;
 }
 
 .restaurant-image {
     width: 100%;
     border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+    height: 200px;
+}
+
+@media screen and (max-width: 753px) {
+    .restaurants-conteiner {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 753px) {
+    .restaurants-conteiner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .restaurant {
+        width: 45vw;
+        max-width: 546px;
+        margin-right: 20px;
+    }
 }
 
 .restaurant-conteiner {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
 .restaurant-heart:hover {
     color: #9356DC;
 }
+
+.restaurant-name {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 20px;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.restaurant-location {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    margin: 0;  
+    font-weight: 400;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.restaurant-heart {
+    font-size: 30px;
+    color: black;
+    font-weight: 300;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
 
 
 /* footer */
