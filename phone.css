@@ -112,6 +112,7 @@ a {
 .fonction {
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .fonction-conteiner {
@@ -215,9 +216,10 @@ a {
 .restaurant {
     box-shadow: 0px 0px 15px 11px rgba(0, 0, 0, 0.128);
     width: 100%;
-    max-width: 700px;
+    max-width: 960px;
     border-radius: 20px;
     margin-bottom: 25px;
+    position: relative;
 }
 
 .restaurant-new {
@@ -237,13 +239,13 @@ a {
     height: 200px;
 }
 
-@media screen and (max-width: 753px) {
+@media screen and (max-width: 959px) {
     .restaurants-conteiner {
         display: flex;
         flex-direction: column;
     }
 }
-@media screen and (min-width: 753px) {
+@media screen and (min-width: 960px) {
     .restaurants-conteiner {
         display: flex;
         flex-wrap: wrap;
