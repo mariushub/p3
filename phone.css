@@ -102,6 +102,10 @@ a {
     font-family: 'Roboto', sans-serif;
 }
 
+.explore-btn:hover {
+    transform: scale(1.15);
+}
+
 
 
 
