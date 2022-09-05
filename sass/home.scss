@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+/* font-family: 'Shrikhand', cursive; */
+/* font-family: 'Roboto', sans-serif; */
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.iswhite {
+    color: white !important;
+}
+
+/* header */
+
+.header-conteiner {
+    border-bottom: solid 2px #C6C6C6;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.header-logo {
+    width: 40%;
+    max-width: 200px;
+}
+
+/* location  */
+.location-conteiner {
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.location-text {
+    font-size: 17px;
+    margin: 0;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.location-logo {
+    font-size: 17px;
+    padding-right: 20px;
+}
+
+/* explore */
+.explore {
+    background-color: rgb(246, 246, 246);
+}
+
+.explore-conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.explore-title {
+    margin-top: 20px !important;
+    margin-bottom: 15px !important;
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.explore-text {
+    margin-bottom: 30px !important;
+    margin: 0;
+    color: black;
+    font-weight: 300;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.explore-btn {
+    height: 46px;
+    width: 190px;
+    margin-bottom: 50px;
+    border: 0 solid transparent;
+    border-radius: 30px;
+    background: rgb(255,121,218);
+    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+}
+
+.explore-btn-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: white !important;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.explore-btn:hover {
+    transform: scale(1.15);
+}
+
+
+
+
+
+
+/* fonctionnement */
+
+.fonction {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.fonction-conteiner {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1154px) {
+    .fonction-btn {
+        margin-right: 20px;
+    }
+
+    .fonction-conteiner {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+.fonction-title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.fonction-btn {
+    display: flex;
+    margin-left: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 26px;
+    border: solid 0px transparent;
+    border-radius: 15px;
+    height: 66px;
+    color: rgb(107, 107, 107);
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.26); 
+    box-shadow: 5px 10px 20px 3px rgba(0,0,0,0.26);
+}
+
+.fonction-btn:hover {
+    color: #9356DC;
+    background-color: #cfc4dc87 !important;
+}
+
+.fonction-text {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.fonction-logo {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    color: inherit;
+}
+
+.fonction-step {
+    background-color: #9356DC;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    position: relative;
+    left: -13px;
+}
+
+.fonction-step-text {
+    margin: 0;
+    font-weight: 500;
+    font-size: 12px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/* liste restaurant */
+.restaurants {
+    background-color: rgb(246, 246, 246);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.restaurants-title {
+    color: black;
+    margin: 0;
+    padding-top: 40px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+.restaurant {
+    box-shadow: 0px 0px 15px 11px rgba(0, 0, 0, 0.128);
+    width: 100%;
+    max-width: 960px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.restaurant-new {
+    background-color: #99e2d0;
+    color: #1b6150;
+    padding: .5rem;
+    border-radius: .125rem;
+    position: absolute;
+    top: 1rem;
+    right: .75rem;
+}
+
+.restaurant-image {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+    height: 200px;
+}
+
+@media screen and (max-width: 959px) {
+    .restaurants-conteiner {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 960px) {
+    .restaurants-conteiner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .restaurant {
+        width: 45vw;
+        max-width: 546px;
+        margin-right: 20px;
+    }
+}
+
+.restaurant-conteiner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.restaurant-heart:hover {
+    color: #9356DC;
+}
+
+.restaurant-name {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 20px;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.restaurant-location {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    margin: 0;  
+    font-weight: 400;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.restaurant-heart {
+    font-size: 30px;
+    color: black;
+    font-weight: 300;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
+
+
+/* footer */
+
+.footer {
+    background-color: rgb(53, 53, 53);
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-title {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.footer-text {
+    color: white;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-bold {
+    font-weight: 600 !important;
+}
+
+.footer-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-icon {
+    color: white;
+    font-size: 15px;
+    margin-right: 10px;
+}
