@@ -131,6 +131,7 @@ body {
   animation: food-in 0.6s;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: both;
+  overflow: hidden;
 }
 
 .food:nth-child(1n) {
@@ -178,6 +179,46 @@ body {
     opacity: 100%;
   }
 }
+.food:hover .food-div3 {
+  transform: translateX(-100%);
+}
+
+.food:hover .food-div2 {
+  transform: translateX(-100%);
+}
+
+.food:hover .food-icon {
+  rotate: 360deg;
+}
+
+.food-div3 {
+  width: 20%;
+  border-radius: 0px 20px 20px 0px;
+  display: block;
+  margin-right: -20%;
+  height: inherit;
+  background: #99e2d0;
+  transition-duration: 1s;
+}
+.food-div3 .food-confirm {
+  background-color: white;
+  border-radius: 100%;
+  margin: auto;
+  margin-top: 23px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.food-div3 .food-confirm .food-icon {
+  color: #99e2d0;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: forwards;
+  transition: rotate 1s;
+  transition-delay: 0.1s;
+}
+
 .food-div1 {
   display: flex;
   width: 80%;
@@ -209,6 +250,7 @@ body {
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
+  transition-duration: 0.9s;
 }
 
 .food-price {

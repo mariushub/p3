@@ -6,6 +6,40 @@ body {
   margin: 0;
 }
 
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #ff79da 94%, rgba(0, 0, 0, 0)) top/9px 9px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, #ff79da);
+  -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
+  animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes loader {
+  to {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 a {
   text-decoration: none;
 }
@@ -102,6 +136,7 @@ a {
 
 .explore-btn:hover {
   transform: scale(1.15);
+  cursor: pointer;
 }
 
 /* fonctionnement */

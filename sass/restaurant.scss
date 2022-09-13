@@ -144,6 +144,7 @@ body {
     animation: food-in .6s;
     animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
     animation-fill-mode: both;
+    overflow: hidden;
 }
 
 @for $i from 1 through 9 {
@@ -159,6 +160,48 @@ body {
     }
     100% {
         opacity: 100%;
+    }
+}
+
+.food:hover .food-div3 {
+    transform:translateX(-100%)
+}
+
+.food:hover .food-div2 {
+    transform:translateX(-100%)
+}
+
+.food:hover .food-icon {
+    rotate: 360deg;
+}
+
+.food-div3 {
+    width: 20%;
+    border-radius: 0px 20px 20px 0px;
+    display: block;
+    margin-right: -20%;
+    height: inherit;
+    background: #99e2d0;
+    transition-duration: 1s;
+
+    .food-confirm {
+        background-color: white;
+        border-radius: 100%;
+        margin: auto;
+        margin-top: 23px;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .food-icon {
+            color: #99e2d0;
+            animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+            animation-fill-mode: forwards;
+            transition: rotate 1s;
+            transition-delay: .1s;
+        }
     }
 }
 
@@ -193,6 +236,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-end;
+    transition-duration: 0.9s;
 }
 
 .food-price {

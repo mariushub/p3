@@ -7,6 +7,46 @@ body {
     margin: 0;
 }
 
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    animation: loader .01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side,#ff79da 94%,#0000) top/9px 9px no-repeat,
+           conic-gradient(#0000 30%,#ff79da);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+    animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+    100% {
+       transform: rotate(1turn);
+    }
+}
+
+@keyframes loader {
+    from {
+    }
+
+    to {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
 a {
     text-decoration: none;
 }
@@ -104,6 +144,7 @@ a {
 
 .explore-btn:hover {
     transform: scale(1.15);
+    cursor: pointer;
 }
 
 
@@ -155,7 +196,7 @@ a {
     border-radius: 15px;
     height: 66px;
     color: rgb(107, 107, 107);
-    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.26); 
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.26);
     box-shadow: 5px 10px 20px 3px rgba(0,0,0,0.26);
 }
 
@@ -285,7 +326,7 @@ a {
 .restaurant-location {
     font-family: 'Roboto', sans-serif;
     color: black;
-    margin: 0;  
+    margin: 0;
     font-weight: 400;
     font-size: 17px;
     padding-top: 10px;
