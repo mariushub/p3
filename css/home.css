@@ -6,10 +6,6 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-}
-
 .loader {
   position: fixed;
   height: 100%;
@@ -127,6 +123,14 @@ a {
   border-radius: 30px;
   background: rgb(255, 121, 218);
   background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  transition-duration: 0.2s;
+}
+.explore-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 5px 10px 20px 3px rgba(0, 0, 0, 0.26);
+  background: linear-gradient(180deg, rgba(255, 121, 217, 0.793) 0%, rgba(146, 86, 220, 0.805) 100%);
 }
 
 .explore-btn-title {
@@ -136,11 +140,6 @@ a {
   color: white !important;
   text-align: center;
   font-family: "Roboto", sans-serif;
-}
-
-.explore-btn:hover {
-  transform: scale(1.15);
-  cursor: pointer;
 }
 
 /* fonctionnement */

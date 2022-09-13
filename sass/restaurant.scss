@@ -85,6 +85,16 @@ body {
     
 }
 
+.food-delay-1 { animation-delay: 0.1s !important; }
+.food-delay-2 { animation-delay: 0.2s !important; }
+.food-delay-3 { animation-delay: 0.3s !important; }
+.food-delay-4 { animation-delay: 0.4s !important; }
+.food-delay-5 { animation-delay: 0.5s !important; }
+.food-delay-6 { animation-delay: 0.6s !important; }
+.food-delay-7 { animation-delay: 0.7s !important; }
+.food-delay-8 { animation-delay: 0.8s !important; }
+.food-delay-9 { animation-delay: 0.9s !important; }
+
 .restaurant-name-div {
     background-color: #f3f3f3;
     border-radius: 40px 40px 0px 0px;
@@ -104,9 +114,58 @@ body {
 }
 
 .restaurant-heart {
-    font-size: 30px;
-    width: 100;
-    padding-right: 40px;
+    height: 2rem;
+    width: 2rem;
+    background-color: initial;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        .heart-bg {
+            opacity: 0;
+        }
+    }
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .heart-bg {
+        background: linear-gradient(to top right, #ED74DA, #9356DC);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transition-property: transform;
+        transition-duration: 0.1s;
+        opacity: 0;
+
+        &:hover {
+            animation: heart;
+        }
+    }
+}
+
+@keyframes heart {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
 }
 
 .foods {
@@ -145,12 +204,6 @@ body {
     animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
     animation-fill-mode: both;
     overflow: hidden;
-}
-
-@for $i from 1 through 9 {
-    .food:nth-child(#{$i}n) {
-        animation-delay: #{$i * 0.1}s;
-    }
 }
 
 @keyframes food-in {
@@ -269,6 +322,15 @@ body {
         margin-left: -50px;
         padding-bottom: 17px;
         box-shadow: 0px 0px 15px 9px rgba(0, 0, 0, 0.098);
+        transition-duration: 0.2s;
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.26);
+            box-shadow: 5px 10px 20px 3px rgba(0,0,0,0.26);
+            background: linear-gradient(180deg, rgba(255, 121, 217, 0.793) 0%, rgba(146, 86, 220, 0.805) 100%);
+        }
     }
 
     .order {
@@ -313,6 +375,15 @@ body {
         padding-top: 17px;
         padding-bottom: 17px;
         box-shadow: 0px 0px 15px 9px rgba(0, 0, 0, 0.098);
+        transition-duration: 0.2s;
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.26);
+            box-shadow: 5px 10px 20px 3px rgba(0,0,0,0.26);
+            background: linear-gradient(180deg, rgba(255, 121, 217, 0.793) 0%, rgba(146, 86, 220, 0.805) 100%);
+        }
     }
 }
 
