@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+a {
+  color: inherit;
+}
+
 .loader {
   position: fixed;
   height: 100%;
