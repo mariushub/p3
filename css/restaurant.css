@@ -139,7 +139,7 @@ body {
   position: relative;
 }
 .restaurant-heart:hover .heart-bg {
-  opacity: 0;
+  transform: scale(1000);
 }
 .restaurant-heart .icon {
   display: flex;
@@ -159,11 +159,9 @@ body {
   background-clip: text;
   color: transparent;
   transition-property: transform;
-  transition-duration: 0.1s;
-  opacity: 0;
-}
-.restaurant-heart .heart-bg:hover {
-  animation: heart;
+  transition-duration: 0.2s;
+  opacity: 100;
+  scale: 0.001;
 }
 
 @keyframes heart {

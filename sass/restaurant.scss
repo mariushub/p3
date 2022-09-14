@@ -127,7 +127,7 @@ body {
 
     &:hover {
         .heart-bg {
-            opacity: 0;
+            transform: scale(1000);
         }
     }
     .icon {
@@ -149,12 +149,9 @@ body {
         background-clip: text;
         color: transparent;
         transition-property: transform;
-        transition-duration: 0.1s;
-        opacity: 0;
-
-        &:hover {
-            animation: heart;
-        }
+        transition-duration: 0.2s;
+        opacity: 100;
+        scale: 0.001;
     }
 }
 
