@@ -145,7 +145,7 @@ a {
   position: relative;
 }
 .restaurant-heart:hover .heart-bg {
-  transform: scale(1000);
+  transform: scale(1);
 }
 .restaurant-heart .icon {
   display: flex;
@@ -167,7 +167,7 @@ a {
   transition-property: transform;
   transition-duration: 0.2s;
   opacity: 100;
-  scale: 0.001;
+  transform: scale(0.001);
 }
 
 @keyframes heart {
@@ -234,7 +234,7 @@ a {
 }
 
 .food:hover .food-icon {
-  rotate: 360deg;
+  transform: rotate(360deg);
 }
 
 .food-div3 {
@@ -261,7 +261,7 @@ a {
   color: #99e2d0;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: forwards;
-  transition: rotate 1s;
+  transition: 1s;
   transition-delay: 0.1s;
 }
 

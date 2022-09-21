@@ -333,7 +333,7 @@ a {
   position: relative;
 }
 .restaurant-heart:hover .heart-bg {
-  transform: scale(1000);
+  transform: scale(1);
 }
 .restaurant-heart .icon {
   display: flex;
@@ -355,7 +355,7 @@ a {
   transition-property: transform;
   transition-duration: 0.2s;
   opacity: 100;
-  scale: 0.001;
+  transform: scale(0.001);
 }
 .restaurant-heart .heart {
   color: black;
