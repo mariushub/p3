@@ -10,71 +10,21 @@ a {
   text-decoration: none;
 }
 
-/* HEADER */
-.header-conteiner {
-  border-bottom: solid 2px #C6C6C6;
-  display: flex;
-  justify-content: flex-start;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-.header-logo {
-  width: 40%;
-  max-width: 200px;
-  margin: auto;
-  padding-right: 40px;
-}
-
-.header-arrow {
-  margin-left: 20px;
-}
-
-.header-icon {
-  font-size: 30px;
-  color: black;
-}
-
-/* RESTAURANT */
-.restaurant {
-  display: flex;
-  flex-direction: column;
-}
-
-.restaurant-image {
-  width: 100%;
-  max-height: 400px;
-  display: inline;
-  object-fit: cover;
-}
-
-@media screen and (min-width: 960px) {
-  .restaurant-menu {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
+@keyframes heart {
+  from {
+    opacity: 0;
   }
-  .foods {
-    width: inherit;
-  }
-  .restaurant-card {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+  to {
+    opacity: 100;
   }
 }
-@media screen and (max-width: 959px) {
-  .restaurant-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+@keyframes food-in {
+  0% {
+    opacity: 0%;
+    transform: translateY(100px);
   }
-  .restaurant-card {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+  100% {
+    opacity: 100%;
   }
 }
 .food-delay-1 {
@@ -113,6 +63,89 @@ a {
   animation-delay: 1.8s !important;
 }
 
+.food:hover .food-div3 {
+  margin-right: 0rem;
+}
+
+.food:hover .food-icon {
+  transform: rotate(360deg);
+}
+
+/* HEADER */
+.header-conteiner {
+  border-bottom: solid 2px #C6C6C6;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.header-conteiner .header-arrow {
+  margin-left: 20px;
+}
+.header-conteiner .header-arrow .header-icon {
+  font-size: 30px;
+  color: black;
+}
+.header-conteiner .header-logo {
+  width: 40%;
+  max-width: 200px;
+  margin: auto;
+  padding-right: 40px;
+}
+
+/* RESTAURANT */
+.restaurant {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-image {
+  width: 100%;
+  max-height: 400px;
+  display: inline;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 960px) {
+  .restaurant-card {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .restaurant-card .restaurant-menu {
+    background-color: #f3f3f3;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .restaurant-card .restaurant-menu .foods {
+    background-color: #f3f3f3;
+    width: 30%;
+  }
+}
+@media screen and (max-width: 959px) {
+  .restaurant-card {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .restaurant-card .restaurant-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .restaurant-card .restaurant-menu .foods {
+    background-color: #f3f3f3;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    max-width: 100%;
+  }
+}
 .restaurant-name-div {
   background-color: #f3f3f3;
   border-radius: 40px 40px 0px 0px;
@@ -170,22 +203,6 @@ a {
   transform: scale(0.001);
 }
 
-@keyframes heart {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
-}
-.foods {
-  background-color: #f3f3f3;
-  margin-top: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-}
-
 .foods-title {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -203,9 +220,9 @@ a {
 
 .food {
   display: flex;
+  justify-content: space-between;
   background-color: white;
-  width: 100%;
-  max-width: 960px;
+  max-width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 20px;
@@ -215,29 +232,54 @@ a {
   animation-fill-mode: both;
   overflow: hidden;
 }
-
-@keyframes food-in {
-  0% {
-    opacity: 0%;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 100%;
-  }
+.food .food-div1 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.food:hover .food-div3 {
-  transform: translateX(-100%);
+.food .food-div1 .food-name {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding-bottom: 6px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: white;
 }
-
-.food:hover .food-div2 {
-  transform: translateX(-100%);
+.food .food-div1 .food-desc {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: white;
 }
-
-.food:hover .food-icon {
-  transform: rotate(360deg);
+.food .food-div2 {
+  width: 10%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  justify-content: flex-start;
+  transition-duration: 0.9s;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  padding-bottom: 15px;
+  padding-right: 10px;
 }
-
-.food-div3 {
+.food .food-div3 {
   width: 20%;
   border-radius: 0px 20px 20px 0px;
   display: block;
@@ -245,8 +287,9 @@ a {
   height: inherit;
   background: #99e2d0;
   transition-duration: 1s;
+  justify-content: flex-end;
 }
-.food-div3 .food-confirm {
+.food .food-div3 .food-confirm {
   background-color: white;
   border-radius: 100%;
   margin: auto;
@@ -257,53 +300,12 @@ a {
   justify-content: center;
   align-items: center;
 }
-.food-div3 .food-confirm .food-icon {
+.food .food-div3 .food-confirm .food-icon {
   color: #99e2d0;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: forwards;
   transition: 1s;
   transition-delay: 0.1s;
-}
-
-.food-div1 {
-  display: flex;
-  width: 80%;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-left: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.food-name {
-  margin: 0px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  padding-bottom: 6px;
-}
-
-.food-desc {
-  margin: 0px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.food-div2 {
-  width: 20%;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
-  transition-duration: 0.9s;
-}
-
-.food-price {
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  padding-bottom: 15px;
-  padding-right: 10px;
 }
 
 @media screen and (min-width: 960px) {
