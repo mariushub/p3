@@ -162,6 +162,7 @@ a {
 @media screen and (min-width: 1154px) {
   .fonction-btn {
     margin-right: 20px;
+    background-color: rgb(246, 246, 246);
   }
   .fonction-conteiner {
     display: flex;
@@ -190,6 +191,7 @@ a {
   color: rgb(107, 107, 107);
   -webkit-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.26);
   box-shadow: 5px 10px 20px 3px rgba(0, 0, 0, 0.26);
+  background-color: rgb(246, 246, 246);
 }
 
 .fonction-btn:hover {
