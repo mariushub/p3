@@ -1,28 +1,6 @@
-/* LOADER */
-.loader {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    animation: loader .01s;
-    animation-delay: 1.75s;
-    animation-fill-mode: both;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &__spinner {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: radial-gradient(farthest-side,#ff79da 94%,#0000) top/9px 9px no-repeat,conic-gradient(#0000 30%,#ff79da);
-        animation: spinner 1s infinite linear;
-    }
-}
-
 /* LOCATION */
 .location {
-    background-color: rgb(234, 234, 234);
+    background-color: $sub-header-background;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +22,7 @@
 
 /* explore */
 .explore {
-    background-color: rgb(246, 246, 246);
+    background-color: $section-background;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +32,7 @@
     &__title {
         margin-top: 20px !important;
         margin-bottom: 15px !important;
-        color: black;
+        color: $title-color;
         text-align: center;
         font-family: 'Roboto', sans-serif;
         margin: 0;
@@ -63,7 +41,7 @@
     &__text {
         margin-bottom: 30px !important;
         margin: 0;
-        color: black;
+        color: $text-color;
         font-weight: 300;
         text-align: center;
         font-family: 'Roboto', sans-serif;
@@ -75,11 +53,11 @@
         justify-content: center;
         height: 46px;
         width: 190px;
-        color: white;
+        color: $btn-text-color;
         margin-bottom: 50px;
         border: 0 solid transparent;
         border-radius: 30px;
-        background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+        background: linear-gradient(140deg, $secondary-color 0%, $primary-color 100%);
         transition-duration: 0.2s;
         font-size: 14px;
         font-weight: 500;
@@ -89,7 +67,7 @@
             cursor: pointer;
             -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.26);
             box-shadow: 5px 10px 20px 3px rgba(0,0,0,0.26);
-            background: linear-gradient(180deg, rgba(255, 121, 217, 0.793) 0%, rgba(146, 86, 220, 0.805) 100%);
+            background: linear-gradient(140deg, rgba(255, 121, 217, 0.793) 0%, rgba(146, 86, 220, 0.805) 100%);
         }
     }
 }
@@ -103,7 +81,7 @@
     &__title {
         margin-top: 40px;
         margin-bottom: 30px;
-        color: black;
+        color: $title-color;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -116,18 +94,18 @@
         border: solid 0px transparent;
         border-radius: 15px;
         height: 66px;
-        color: rgb(107, 107, 107);
+        color: $icon-color;
         -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.26);
         box-shadow: 5px 10px 20px 3px rgba(0,0,0,0.26);
-        background-color: rgb(246, 246, 246);
+        background-color: $section-background;
         &:hover {
-            color: #9356DC;
-            background-color: #cfc4dc87 !important;
+            color: $primary-color;
+            background-color: $hover-background !important;
         }
     }
 
     &__step {
-        background-color: #9356DC;
+        background-color: $primary-color;
         width: 22px;
         height: 22px;
         display: flex;
@@ -142,7 +120,7 @@
         margin: 0;
         font-weight: 500;
         font-size: 12px;
-        color: white;
+        color: $btn-text-color;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -157,7 +135,7 @@
         margin: 0;
         font-weight: 500;
         font-size: 14px;
-        color: black;
+        color: $title-color;
         font-family: 'Roboto', sans-serif; 
     }
 }
@@ -184,12 +162,12 @@
 
 /* LISTE RESTAURANTS */
 .restaurants {
-    background-color: rgb(246, 246, 246);
+    background-color: $section-background;
     padding-left: 20px;
     padding-right: 20px;
 
     &__title {
-        color: black;
+        color: $title-color;
         margin: 0;
         padding-top: 40px;
         font-family: 'Roboto', sans-serif;
@@ -226,8 +204,8 @@
     }
 
     &__new {
-        background-color: #99e2d0;
-        color: #1b6150;
+        background-color: $tertiary-color;
+        color: $color-green;
         padding: .5rem;
         border-radius: .125rem;
         position: absolute;
@@ -248,7 +226,7 @@
 
     &__name {
         font-family: 'Roboto', sans-serif;
-        color: black;
+        color: $title-color;
         font-size: 20px;
         margin: 0;
         padding-left: 10px;
@@ -257,7 +235,7 @@
 
     &__location {
         font-family: 'Roboto', sans-serif;
-        color: black;
+        color: $sub-title-color;
         margin: 0;
         font-weight: 400;
         font-size: 17px;
@@ -265,40 +243,7 @@
         padding-left: 10px;
         padding-bottom: 20px;
     }
-
-    &__heart {
-        height: 55px;
-        width: 10%;
-        position: relative;
-        cursor: pointer;
-        &:hover {
-            .restaurant__icon--bg {
-                transform: scale(1);
-            }
-        }
-    }
-
-    &__icon {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        font-size: 25px;
-        color: black;
-    }
-
-    &__icon--bg {
-        background: linear-gradient(to top right, #ED74DA, #9356DC);
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        transition-property: transform;
-        transition-duration: 0.2s;
-        opacity: 100;
-        transform: scale(0);
-    }
 }
-
 @media screen and (max-width: 959px) {
     .restaurant {
         width: 100%;

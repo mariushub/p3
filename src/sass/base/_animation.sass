@@ -1,0 +1,23 @@
+@keyframes food-in
+    0%
+        opacity: 0%
+        transform: translateY(100px)
+    100% 
+        opacity: 100%
+
+.food:hover .food__select 
+    margin-right: 0rem
+
+.food:hover .food__icon 
+    transform: rotate(360deg)
+
+@keyframes spinner 
+    100% 
+       transform: rotate(1turn)
+
+@keyframes loader 
+    from 
+        opacity: 100
+    to 
+        opacity: 0
+        z-index: -10
